@@ -71,7 +71,8 @@ class openvpn::params {
           if(versioncmp($::operatingsystemrelease, '16.04') >= 0){
             $additional_packages = ['easy-rsa','openvpn-auth-ldap']
             $easyrsa_source = '/usr/share/easy-rsa/'
-            $ldap_auth_plugin_location = '/usr/lib/openvpn/openvpn-plugin-auth-pam.so'
+            $pam_module_path   = '/usr/lib/openvpn/openvpn-plugin-auth-pam.so'
+            $ldap_auth_plugin_location = '/usr/lib/openvpn/openvpn-auth-ldap.so'
             $systemd = true
 
           # Version > 15.04, vivid
