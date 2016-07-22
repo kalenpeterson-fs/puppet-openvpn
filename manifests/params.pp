@@ -67,7 +67,7 @@ class openvpn::params {
         }
         'Ubuntu': {
 
-          # Version > 15.04, xenial
+          # Version > 16.04, xenial
           if(versioncmp($::operatingsystemrelease, '16.04') >= 0){
             $additional_packages = ['easy-rsa','openvpn-auth-ldap']
             $easyrsa_source = '/usr/share/easy-rsa/'
